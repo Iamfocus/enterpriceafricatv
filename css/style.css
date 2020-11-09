@@ -1,0 +1,506 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: #d26000; /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.firstNav {
+  background-color: #00004d;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.secondNav {
+  padding-top: 15px;
+}
+
+.email {
+  float: right;
+  padding-right: 40px;
+  color: white;
+  font-size: 1rem;
+}
+
+.open {
+  padding-left: 80px;
+  color: white;
+  font-size: 1rem;
+}
+
+.myDrip {
+  display: none;
+}
+
+.emailLink{
+  color: white;
+}
+
+.emailLink1{
+  color: white;
+  padding-left: 15px;
+}
+
+.emailIcon{
+  float: right;
+}
+
+.logo {
+  padding-left: 80px;
+}
+
+.call {
+  padding-left: 80px;
+}
+
+.Contact {
+  padding-left: 80px;
+}
+
+.font {
+  color: #e75728;
+}
+
+#myBtn {
+  padding: 10px 25px 15px 25px; 
+  background-image:linear-gradient(200deg,   #e75728 0% 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin-left: 80px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#myBtn3 {
+  padding: 10px 25px 15px 25px; 
+  background-image:linear-gradient(200deg,   #e75728 0% 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#myBtn1 {
+  padding: 10px 25px 15px 25px; 
+  background-image:linear-gradient(200deg,   #e75728 0% 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10px;
+}
+
+#myBtn2 {
+  padding: 10px 25px 15px 25px; 
+  background-image:linear-gradient(200deg,   #e75728 0% 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar {
+  background-color:  #e75728 !important;
+  padding: 20px;
+}
+
+ul li a{
+  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 400px;
+}
+
+#Lander {
+  height: 100vh;
+  background: url("../images/gallery1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+.firstHeader {
+  margin-top: 100px;
+  color: white;
+  font-size: 80px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.gallery {
+  margin-top: 120px;
+}
+
+.gallery1 {
+  margin-top: 120px;
+}
+
+
+.secondHeader {
+  color: white;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.secondHeader1 {
+  color: white;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.thirdHeader {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 10px;
+  
+}
+
+.dot {
+  font-size: 40px;
+  color: #e75728;
+  font-weight: bold;
+}
+
+.knowUs {
+  margin-top: 90px;
+  color: #e75728;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+}
+
+.knowUsMore {
+  margin-top: 160px;
+  color: #e75728;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+}
+
+.newsTitle {
+  margin-top: 90px;
+  color: #e75728;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+  text-align: center;
+}
+
+.newsPara {
+  color: black;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.stayPara {
+  color:  #e75728;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.spanNews {
+  margin-top: 90px;
+  color: black;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+  text-align: center;
+}
+
+#myBtnr {
+  padding: 10px 25px 15px 25px; 
+  background-image:linear-gradient(200deg,  #ff9900 0%, #00004d 100%);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  
+}
+
+#canvas {
+  background: white;
+  color: white;
+  padding-bottom: 80px;
+}
+
+.canvasText {
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .myDrip {
+    display: block;
+  }
+
+  .firstNav {
+    display: none;
+  }
+
+  .email {
+    display: none;
+  }
+  
+  .call {
+    display: none;
+  }
+
+  .Contact{
+    display: none;
+  }
+
+  .myButton {
+    display: none;
+  }
+
+  .navbar {
+    display: none !important;
+
+  }
+
+  .firstHeader {
+    margin-top: 60px;
+    color: #e75728;
+    font-size: 30px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+  }
+
+  .secondHeader {
+    color: white;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    margin-left: 0px;
+  }
+  
+  .thirdHeader {
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    margin-left: 0px;
+    
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .gallery1 {
+    width: 100%;
+  }
+
+  #myBtn1 {
+    margin-left: 0px;
+  }
+
+  .thirdHeader {
+    display: none;
+  }
+
+  #Lander {
+    height: 80vh;
+    background: url("../images/gallery1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  .secondNav {
+    padding-top: 0px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+}
+
+
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    height: 75vh;
+  }
+  header video {
+    
+  }
+}
+
+
+.content {
+  padding: 10px 20px;
+}
+.content p {
+  font-family: sans-serif;
+}
+
+/******/
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-canvas {
+  width: calc((200px * 15) + 2px);
+  /* 
+  200px = minimum width of ticker item before widget script starts removing ticker codes
+  15 = number of ticker codes
+  2px = accounts for 1px external border
+  */
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker-canvas;
+  animation-name: ticker-canvas;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+.ticker-canvas:hover {
+  animation-play-state: paused
+}
+
+@-webkit-keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.tradingview-widget-container {
+  position: relative;
+}
+.tradingview-widget-container iframe {
+    position: absolute;
+    top: 0;
+}
+.tradingview-widget-container iframe:nth-of-type(2) {
+  left: 100%;
+}
